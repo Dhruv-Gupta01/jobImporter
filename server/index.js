@@ -17,6 +17,10 @@ cron.schedule('0 * * * *', async () => {
   console.log('Running cron job to fetch jobs...');
   await fetchAndQueueJobs(); // fetches job XML feeds, converts to JSON, and adds to Redis queue
 });
+// cron.schedule('*/2 * * * *', async () => {
+//     console.log("⏰ Cron triggered: Fetching jobs...");
+//     await fetchAndQueueJobs();
+//   });
 
 //for testing
 //fetchAndQueueJobs().then(() => console.log("Jobs queued successfully"));
